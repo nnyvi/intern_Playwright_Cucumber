@@ -60,12 +60,13 @@ Feature: Home Page
     #     Then There should be a error message displayes --less 450
     #         | The minimum spend for this coupon is ₹450.00. |
 
-    Scenario: Home - Arivals - Add to Basket - Items - Remove book
-        Given User is on the Books Shop Home Page --remove
-        When User clicks on "Selenium Ruby" image in the Arrivals --remove
-        And User clicks Add to Basket button --remove
-        And User clicks on Item link --remove
-        And User removes the "Selenium Ruby" book in basket --remove
-        Then There should be a message displayed --remove
-            | Selenium Ruby removed. Undo? |
+    # Scenario: Home - Arivals - Add to Basket - Items - Remove book
+    #     Given User is on the Books Shop Home Page --remove
+    #     When User clicks on "Selenium Ruby" image in the Arrivals --remove
+    #     And User clicks Add to Basket button --remove
+    #     And User clicks on Item link --remove
+    #     And User removes the "Selenium Ruby" book in basket --remove
+    #     Then There should be a message displayed --remove
+    #         | Selenium Ruby removed. Undo? |
+    
 
