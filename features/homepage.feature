@@ -69,4 +69,13 @@ Feature: Home Page
     #     Then There should be a message displayed --remove
     #         | Selenium Ruby removed. Undo? |
     
+    Scenario: Home - Arrivals - Add to Basket - Items - Add book
+        Given User is on the Books Shop Home Page --add book
+        When User click on "Selenium Ruby" image in the Arrivals --add book
+        And User clicks Add to Basket button --add book
+        And User clicks on Item link --add book
+        Then The update basket button should be unclickable --add book
+        When User adds more books --add book
+        And User clicks on Update basket button --add book
+        Then User should see a update basket --add book
 
