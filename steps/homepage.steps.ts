@@ -156,11 +156,11 @@ Given('User is on the Books Shop Home Page --remove', function () {
 });
 
 When('User clicks on {string} image in the Arrivals --remove', function (string) {
-        homePage.click(string);
-    });
+    homePage.click(string);
+});
 
-When('User clicks Add to Basket button --remove', function () {
-    homePage.click('addtobasket');
+When('User clicks Add to Basket button --remove', async function () {
+    await homePage.click('addtobasket');
 });
 
 When('User clicks on Item link --remove', function () {
@@ -173,4 +173,62 @@ When('User removes the {string} book in basket --remove', async function (string
 
 Then('There should be a message displayed --remove', async function (table: DataTable) {
     await homePage.verify(table, 'message');
+});
+
+//Home - Arrivals - Add to Basket - Items - Add book - Update basket
+Given('User is on the Books Shop Home Page --add book', function () {
+    homePage = new HomePage();
+});
+
+When('User click on {string} image in the Arrivals --add book', function (string) {
+    homePage.click(string);
+});
+
+When('User clicks Add to Basket button --add book', async function () {
+    await homePage.click('addtobasket');
+});
+
+When('User clicks on Item link --add book', function () {
+    homePage.click('items');
+});
+
+Then('The update basket button should be unclickable --add book', async function () {
+    await homePage.verifyUpdBtn('Disabled');
+});
+
+When('User modifies quantity for {string} and clicks on Update basket button --add book', async function (string) {
+    await homePage.updQuantity(string, '10');
+});
+
+Then('There should be a successfully updated message displayed --add book', async function (table: DataTable) {
+    await homePage.verify(table, 'message');
+});
+
+//Home - Arrivals - Add to Basket - Check out - Book Final price - Total & Sub-total condition
+Given('User is on the Books Shop Home page --total', function () {
+    homePage = new HomePage();
+});
+
+When('User click on {string} image in the Arrivals --total', function (string) {
+    homePage.click(string);
+});
+
+When('User clicks Add to Basket button --total', async function () {
+    await homePage.click('addtobasket');
+});
+
+When('User clicks on Item link --total', function () {
+    homePage.click('items');
+});
+
+Then('There should be the total price of the books --total', function () {
+   
+});
+
+Then('There also should be total above the Proceed to Checkout button --total', function () {
+    
+});
+
+Then('The tax value should be {int}% --total', function (int) {
+   
 });

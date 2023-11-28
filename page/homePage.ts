@@ -21,7 +21,10 @@ export class HomePage {
         applyCouponBtn: "//input[@name='apply_coupon']",
         basketMes: "//div[@class='woocommerce-message']",
         basketErr: "//ul[@class='woocommerce-error']//li",
-        basketRow: "//table//tbody//tr"
+        basketRow: "//table//tbody//tr",
+        updateBtn: "//input[@value='Update Basket']",
+        prodSubtotal: "//td[@class='product-subtotal']",
+
     }
 
     async verifyArrivals() {
@@ -111,8 +114,34 @@ export class HomePage {
     }
 
     async removeItem (txt: string) {
-        const row = page.locator(this.Elements.basketRow)
+        const row = page.locator(this.Elements.basketRow);
         const btn = row.filter({ hasText: txt}).getByTitle('Remove this item');
         await btn.click();
     }
+
+    async updQuantity (txt: string, quantity: string) {
+        const row = page.locator(this.Elements.basketRow);
+        const input = row.filter({ hasText: txt}).getByTitle('Qty');
+        await input.fill(quantity);
+        await page.click(this.Elements.updateBtn);
+    }
+
+    async verifyUpdBtn (status: string) {
+        let updBasket = page.locator(this.Elements.updateBtn);
+        switch (status) {
+            case 'Enabled':
+                await expect(updBasket).toBeEnabled();
+                break;
+            case 'Disabled':
+                await expect(updBasket).toBeDisabled();
+                break;
+        }
+    }
+
+    async verifyPrice (txt: string, subtotal: string) {
+        const row = page.locator(this.Elements.basketRow);
+        const input = row.filter({ hasText: txt}).locator(this.Elements.prodSubtotal);
+        await expect (input.textContent()).toBe(subtotal);
+    }
+
 }
