@@ -209,26 +209,18 @@ Given('User is on the Books Shop Home page --total', function () {
     homePage = new HomePage();
 });
 
-When('User click on {string} image in the Arrivals --total', function (string) {
-    homePage.click(string);
+When('User click on {string} image in the Arrivals --total', async function (string) {
+    await homePage.click(string);
 });
 
 When('User clicks Add to Basket button --total', async function () {
     await homePage.click('addtobasket');
 });
 
-When('User clicks on Item link --total', function () {
-    homePage.click('items');
+When('User clicks on Item link --total', async function () {
+    await homePage.click('items');
 });
 
-Then('There should be the total price of the books --total', function () {
-   
-});
-
-Then('There also should be total above the Proceed to Checkout button --total', function () {
-    
-});
-
-Then('The tax value should be {int}% --total', function (int) {
-   
+Then('There should be the information to checkout for the books in basket --total', async function (table: DataTable) {
+   await homePage.verifyPrice(table);
 });

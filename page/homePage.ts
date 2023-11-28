@@ -24,7 +24,9 @@ export class HomePage {
         basketRow: "//table//tbody//tr",
         updateBtn: "//input[@value='Update Basket']",
         prodSubtotal: "//td[@class='product-subtotal']",
-
+        subtotal: "//td[@data-title='Subtotal']",
+        tax: "//td[@data-title='Tax']",
+        total: "//tr[@class='order-total']//td[@data-title='Total']"
     }
 
     async verifyArrivals() {
@@ -138,10 +140,18 @@ export class HomePage {
         }
     }
 
-    async verifyPrice (txt: string, subtotal: string) {
-        const row = page.locator(this.Elements.basketRow);
-        const input = row.filter({ hasText: txt}).locator(this.Elements.prodSubtotal);
-        await expect (input.textContent()).toBe(subtotal);
+    async verifyPrice (table: DataTable) {
+        const elements = [
+            this.Elements.prodSubtotal,
+            this.Elements.subtotal,
+            this.Elements.tax,
+            this.Elements.total
+        ];
+        let expectVal = table.raw()[1];
+        for ( let i = 0; i < elements.length; i ++) {
+            const actualVal = await page.locator(elements[i]).textContent()
+            await expect(actualVal?.trim()).toBe(expectVal[i].trim());
+        }
     }
 
 }

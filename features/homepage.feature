@@ -70,23 +70,26 @@ Feature: Home Page
     #         | Selenium Ruby removed. Undo? |
     
     #both 12 and 14
-    Scenario: Home - Arrivals - Add to Basket - Items - Add book - Update basket
-        Given User is on the Books Shop Home Page --add book
-        When User click on "Selenium Ruby" image in the Arrivals --add book
-        And User clicks Add to Basket button --add book
-        And User clicks on Item link --add book
-        Then The update basket button should be unclickable --add book
-        When User modifies quantity for "Selenium Ruby" and clicks on Update basket button --add book
-        Then There should be a successfully updated message displayed --add book
-            | Basket updated. |
+    # Scenario: Home - Arrivals - Add to Basket - Items - Add book - Update basket
+    #     Given User is on the Books Shop Home Page --add book
+    #     When User click on "Selenium Ruby" image in the Arrivals --add book
+    #     And User clicks Add to Basket button --add book
+    #     And User clicks on Item link --add book
+    #     Then The update basket button should be unclickable --add book
+    #     When User modifies quantity for "Selenium Ruby" and clicks on Update basket button --add book
+    #     Then There should be a successfully updated message displayed --add book
+    #         | Basket updated. |
 
     #both 13 and 15
-    # Scenario: Home - Arrivals - Add to Basket - Check out - Book Final price - Total & Sub-total condition
-    #     Given User is on the Books Shop Home page --total
-    #     When User click on "Selenium Ruby" image in the Arrivals --total
-    #     And User clicks Add to Basket button --total
-    #     And User clicks on Item link --total
-    #     Then There should be the total price of the books --total
-    #     And There also should be total and subtotal above the Proceed to Checkout button --total
-    #     And The tax value should be 2% --total
+    Scenario: Home - Arrivals - Add to Basket - Check out - Book Final price - Total & Sub-total condition
+        Given User is on the Books Shop Home page --total
+        When User click on "Selenium Ruby" image in the Arrivals --total
+        And User clicks Add to Basket button --total
+        And User clicks on Item link --total
+        Then There should be the information to checkout for the books in basket --total
+            | totalPrice | subtotal | tax    | total   |
+            | ₹500.00    | ₹500.00  | ₹10.00 | ₹510.00 |
+#In more ordered books case, I have yet tested, I only test for one ordered book.
+
+
 
