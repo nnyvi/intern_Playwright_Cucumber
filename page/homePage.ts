@@ -26,7 +26,17 @@ export class HomePage {
         prodSubtotal: "//td[@class='product-subtotal']",
         subtotal: "//td[@data-title='Subtotal']",
         tax: "//td[@data-title='Tax']",
-        total: "//tr[@class='order-total']//td[@data-title='Total']"
+        total: "//tr[@class='order-total']//td[@data-title='Total']",
+        paymentTitle: "//div[@class='woocommerce-billing-fields']//h3",
+        fstName: "//input[@id='billing_first_name']",
+        lstName: "//input[@id='billing_last_name']",
+        email: "//input[@id='billing_email']",
+        phone: "//input[@id='billing_phone']",
+        address: "//input[@id='billing_address_1']",
+        city: "//input[@id='billing_city']",
+        postcode: "//input[@id='billing_postcode']",
+        paymentMes: "//p[@class='woocommerce-thankyou-order-received']",
+        placeorderBtn: "//input[@class='button alt']"
     }
 
     async verifyArrivals() {
@@ -64,8 +74,11 @@ export class HomePage {
             case 'items':
                 element = this.Elements.cart;
                 break;
-            case 'proceedtocheckout':
+            case 'Proceed to Checkout':
                 element = this.Elements.proceedtoChkoutBtn;
+                break;
+            case 'Place order':
+                element = this.Elements.placeorderBtn;
                 break;
         }
         await page.locator(this.Elements.home).scrollIntoViewIfNeeded();
@@ -103,6 +116,12 @@ export class HomePage {
                 break;
             case 'error':
                 element = this.Elements.basketErr;
+                break;
+            case 'Proceed to Checkout':
+                element = this.Elements.paymentTitle;
+                break;
+            case 'Success payment':
+                element = this.Elements.paymentMes;
                 break;
         }
         const expectRel = table.raw()[0][0];
@@ -154,4 +173,19 @@ export class HomePage {
         }
     }
 
+    async fillPayment (table: DataTable) {
+        const elements = [
+            this.Elements.fstName,
+            this.Elements.lstName,
+            this.Elements.email,
+            this.Elements.phone,
+            this.Elements.address,
+            this.Elements.city,
+            this.Elements.postcode
+        ]
+        for (let i = 0; i < elements.length; i++) {
+            const inputValue = table.raw()[1][i];
+            await page.fill(elements[i], inputValue);
+        }
+    }
 }

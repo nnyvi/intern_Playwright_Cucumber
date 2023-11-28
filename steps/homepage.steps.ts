@@ -222,5 +222,60 @@ When('User clicks on Item link --total', async function () {
 });
 
 Then('There should be the information to checkout for the books in basket --total', async function (table: DataTable) {
-   await homePage.verifyPrice(table);
+    await homePage.verifyPrice(table);
+});
+
+//Home - Arrivals - Add to Basket - Items - Check out functionality
+Given('User is on the Books Shop Home page --checkout', function () {
+    homePage = new HomePage();
+});
+
+When('User click on {string} image in the Arrivals --checkout', async function (string) {
+    await homePage.click(string);
+});
+
+When('User clicks Add to Basket button --checkout', async function () {
+    await homePage.click('addtobasket');
+});
+
+When('User clicks on Item link --checkout', async function () {
+    await homePage.click('items');
+});
+
+When('User click on {string} button under total --checkout', async function (string) {
+    await homePage.click(string);
+});
+
+Then('User should be navigated to payment gateway page --checkout', async function (table: DataTable) {
+    await homePage.verify(table, 'Proceed to Checkout');
+});
+
+//Home - Arrivals - Add to Basket - Items - Check out - Payment Gateway
+Given('User is on the Books Shop Home page --payment', function () {
+    homePage = new HomePage();
+});
+
+When('User click on {string} image in the Arrivals --payment', async function (string) {
+    await homePage.click(string);
+});
+
+When('User clicks Add to Basket button --payment', async function () {
+    await homePage.click('addtobasket');
+});
+
+When('User clicks on Item link --payment', async function () {
+    await homePage.click('items');
+});
+
+When('User click on {string} button under total --payment', async function (string) {
+    await homePage.click(string);
+});
+
+When('User fills information to payment and click {string} button --payment', async function (string, table: DataTable) {
+    await homePage.fillPayment(table);
+    await homePage.click(string);
+});
+
+Then('There should be a successful payment message --payment', async function (table: DataTable) {
+    await homePage.verify(table, 'Success payment');
 });

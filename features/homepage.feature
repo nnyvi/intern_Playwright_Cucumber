@@ -68,7 +68,7 @@ Feature: Home Page
     #     And User removes the "Selenium Ruby" book in basket --remove
     #     Then There should be a message displayed --remove
     #         | Selenium Ruby removed. Undo? |
-    
+
     #both 12 and 14
     # Scenario: Home - Arrivals - Add to Basket - Items - Add book - Update basket
     #     Given User is on the Books Shop Home Page --add book
@@ -81,15 +81,34 @@ Feature: Home Page
     #         | Basket updated. |
 
     #both 13 and 15
-    Scenario: Home - Arrivals - Add to Basket - Check out - Book Final price - Total & Sub-total condition
-        Given User is on the Books Shop Home page --total
-        When User click on "Selenium Ruby" image in the Arrivals --total
-        And User clicks Add to Basket button --total
-        And User clicks on Item link --total
-        Then There should be the information to checkout for the books in basket --total
-            | totalPrice | subtotal | tax    | total   |
-            | ₹500.00    | ₹500.00  | ₹10.00 | ₹510.00 |
-#In more ordered books case, I have yet tested, I only test for one ordered book.
+    # Scenario: Home - Arrivals - Add to Basket - Check out - Book Final price - Total & Sub-total condition
+    #     Given User is on the Books Shop Home page --total
+    #     When User click on "Selenium Ruby" image in the Arrivals --total
+    #     And User clicks Add to Basket button --total
+    #     And User clicks on Item link --total
+    #     Then There should be the information to checkout for the books in basket --total
+    #         | totalPrice | subtotal | tax    | total   |
+    #         | ₹500.00    | ₹500.00  | ₹10.00 | ₹510.00 |
+    #In more ordered books case, I have yet tested, I only test for one ordered book.
 
+    # Scenario: Home - Arrivals - Add to Basket - Items - Check out functionality
+    #     Given User is on the Books Shop Home page --checkout
+    #     When User click on "Selenium Ruby" image in the Arrivals --checkout
+    #     And User clicks Add to Basket button --checkout
+    #     And User clicks on Item link --checkout
+    #     And User click on "Proceed to Checkout" button under total --checkout
+    #     Then User should be navigated to payment gateway page --checkout
+    #         | Billing Details |
 
-
+    #both 17 and 18
+    Scenario: Home - Arrivals - Add to Basket - Items - Check out - Payment Gateway
+        Given User is on the Books Shop Home page --payment
+        When User click on "Selenium Ruby" image in the Arrivals --payment
+        And User clicks Add to Basket button --payment
+        And User clicks on Item link --payment
+        And User click on "Proceed to Checkout" button under total --payment
+        And User fills information to payment and click "Place order" button --payment
+            | First Name | Last Name | Email Address | Phone | Address | City | Postcode |
+            | test       | test      | test@gmail.com| 1234  | test    | test | TEST     |
+        Then There should be a successful payment message --payment
+            | Thank you. Your order has been received. |
