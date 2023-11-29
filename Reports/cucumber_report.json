@@ -1,0 +1,128 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "home-page;verify-that-user-can-not-apply-coupon-for-sale-book",
+        "keyword": "Scenario",
+        "line": 132,
+        "name": "Verify that user can not apply coupon for sale book",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 32658395900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 133,
+            "name": "User is on the Books Shop Home page --sale",
+            "match": {
+              "location": "steps\\homepage.steps.ts:313"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 445699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 134,
+            "name": "User clicks on \"ADD TO BASKET\" button of Thinking in HTML image in the Arrivals--sale",
+            "match": {
+              "location": "steps\\homepage.steps.ts:317"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 302115900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 135,
+            "name": "User clicks on \"ADD TO BASKET\" button of Selenium Ruby image in the Arrivals--sale",
+            "match": {
+              "location": "steps\\homepage.steps.ts:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 246150299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 136,
+            "name": "User clicks on \"items\" link --sale",
+            "match": {
+              "location": "steps\\homepage.steps.ts:325"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 564870100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 137,
+            "name": "User applys \"krishnasakinala\" coupon code for basket --sale",
+            "match": {
+              "location": "steps\\homepage.steps.ts:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 498488999
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Sorry, this coupon is not valid for sale items."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 138,
+            "name": "There should be an error message displayed --sale",
+            "match": {
+              "location": "steps\\homepage.steps.ts:333"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 233315299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 383386000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "home-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Home Page",
+    "tags": [],
+    "uri": "features\\homepage.feature"
+  }
+]

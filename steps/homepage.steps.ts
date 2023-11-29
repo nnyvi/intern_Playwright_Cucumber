@@ -279,3 +279,57 @@ When('User fills information to payment and click {string} button --payment', as
 Then('There should be a successful payment message --payment', async function (table: DataTable) {
     await homePage.verify(table, 'Success payment');
 });
+
+//Verify that there are validation error messages displayed when clicking place order button without filling payment information
+Given('User is on the Books Shop Home page --blank', async function () {
+    homePage = new HomePage()
+});
+
+When('User clicks on {string} image in the Arrivals --blank', async function (string) {
+    await homePage.click(string)
+});
+
+When('User clicks on Add to Basket button --blank', async function () {
+    await homePage.click('addtobasket')
+});
+
+When('User clicks on Item Link --blank', async function () {
+    await homePage.click('items')
+});
+
+When('User clicks on {string} button under total --blank', async function (string) {
+    await homePage.click(string)
+});
+
+When('User clicks on {string} button --blank', async function (string) {
+    await homePage.click(string)
+});
+
+Then('There should be validation error messages displayed above billing details --blank', async function (table: DataTable) {
+    await homePage.verifyBlank(table);
+});
+
+//Verify that user can not apply coupon for sale book
+Given('User is on the Books Shop Home page --sale', function () {
+    homePage = new HomePage();
+});
+
+When('User clicks on "ADD TO BASKET" button of Thinking in HTML image in the Arrivals--sale', async function () {
+    await homePage.click("Add Think");
+});
+
+When('User clicks on "ADD TO BASKET" button of Selenium Ruby image in the Arrivals--sale', async function () {
+    await homePage.click("Add Selenium");
+});
+
+When('User clicks on {string} link --sale', async function (string) {
+    await homePage.click(string)
+});
+
+When('User applys {string} coupon code for basket --sale', async function (string) {
+    await homePage.applyCoupon(string)
+});
+
+Then('There should be an error message displayed --sale', async function (table: DataTable) {
+    await homePage.verify(table, 'error');
+});

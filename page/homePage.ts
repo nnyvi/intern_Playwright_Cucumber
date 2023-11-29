@@ -8,8 +8,10 @@ export class HomePage {
         item: "//img[@loading='lazy']",
         slider: "//div[contains(@class, 'n2-ss-slider-')]",
         seleniumImage: "//img[@title='Selenium Ruby']",
+        seleniumAdd: "//a[@data-product_id='160']",
         masteringJsImage: "//img[@title='Mastering JavaScript']",
         thinkinginHTMLImage: "//img[@title='Thinking in HTML']",
+        thinkAdd: "//a[@data-product_id='163']",
         addBtn: "//button[@class='single_add_to_cart_button button alt']",
         descriptionBtn: "//a[@href='#tab-description']",
         descriptionTab: "//div[@id='tab-description']//h2",
@@ -36,7 +38,8 @@ export class HomePage {
         city: "//input[@id='billing_city']",
         postcode: "//input[@id='billing_postcode']",
         paymentMes: "//p[@class='woocommerce-thankyou-order-received']",
-        placeorderBtn: "//input[@class='button alt']"
+        placeorderBtn: "//input[@class='button alt']",
+        blankMes: "//ul[@class='woocommerce-error']//li"
     }
 
     async verifyArrivals() {
@@ -56,8 +59,14 @@ export class HomePage {
             case "Selenium Ruby":
                 element = this.Elements.seleniumImage;
                 break;
+            case "Add Selenium":
+                element = this.Elements.seleniumAdd;
+                break;
             case "Thinking in HTML":
                 element = this.Elements.thinkinginHTMLImage;
+                break;
+            case "Add Think":
+                element = this.Elements.thinkAdd;
                 break;
             case "Mastering Javascript":
                 element = this.Elements.masteringJsImage;
@@ -186,6 +195,15 @@ export class HomePage {
         for (let i = 0; i < elements.length; i++) {
             const inputValue = table.raw()[1][i];
             await page.fill(elements[i], inputValue);
+        }
+    }
+
+    async verifyBlank (table: DataTable) {
+        const errorMess = table.raw;
+        for (let i = 0; i < errorMess.length; i++) {
+            const expectVal = errorMess()[i][0]
+            const actualVal = await page.textContent(this.Elements.blankMes);
+            expect(actualVal).toBe(expectVal);
         }
     }
 }
