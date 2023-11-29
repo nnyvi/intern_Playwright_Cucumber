@@ -4,6 +4,1634 @@
     "elements": [
       {
         "description": "",
+        "id": "home-page;home-page-with-three-sliders-only",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Home Page with three Sliders only",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 32183799499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User is on the Books Shop Home page --slider",
+            "match": {
+              "location": "steps\\homepage.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 415299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "The Home page should contain three Sliders only --slider",
+            "match": {
+              "location": "steps\\homepage.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78402699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 388020900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home-page-with-three-arrivals-only",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Home Page with three Arrivals only",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26804390500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "User is on the Books Shop Home page --arrival",
+            "match": {
+              "location": "steps\\homepage.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 231699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "The Home page should contain three Arrivals only --arrival",
+            "match": {
+              "location": "steps\\homepage.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 157565399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 457275499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home-page---images-in-arrivals-should-navigate",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Home page - Images in Arrivals should navigate",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26394045500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "User is on the Books Shop Home page --navigate",
+            "match": {
+              "location": "steps\\homepage.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 305799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "User clicks on \"Selenium Ruby\" image in the Arrivals --navigate",
+            "match": {
+              "location": "steps\\homepage.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 753591699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "User should be navigated to the next page to add that book to basket --navigate",
+            "match": {
+              "location": "steps\\homepage.steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171650300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 390781699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home-page---arrivals---images---description",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Home page - Arrivals - Images - Description",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 27064615200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "User is on the Books Shop Home page --description",
+            "match": {
+              "location": "steps\\homepage.steps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 236699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "User clicks on \"Selenium Ruby\" image in the Arrivals --description",
+            "match": {
+              "location": "steps\\homepage.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 615786700
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Product Description"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "There should be a description regarding that book the user clicked on --description",
+            "match": {
+              "location": "steps\\homepage.steps.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 541865099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 378013800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home-page---arrivals---images---reviews",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Home page - Arrivals - Images - Reviews",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 32091883200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "User is on the Books Shop Home page --reviews",
+            "match": {
+              "location": "steps\\homepage.steps.ts:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 344900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "User clicks on \"Selenium Ruby\" image in the Arrivals --reviews",
+            "match": {
+              "location": "steps\\homepage.steps.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7202499
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Reviews"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "There should be a Reviews regarding that book the user clicked on --reviews",
+            "match": {
+              "location": "steps\\homepage.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1211150900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 519636799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home-page---arrivals---images---add-to-basket",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Home page - Arrivals - Images - Add to Basket",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26752075300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "User is on the Books Shop Home page --add",
+            "match": {
+              "location": "steps\\homepage.steps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 470399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "User clicks on \"Selenium Ruby\" image in the Arrivals --add",
+            "match": {
+              "location": "steps\\homepage.steps.ts:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 671622699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "User clicks on Add to Basket button --add",
+            "match": {
+              "location": "steps\\homepage.steps.ts:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 775719900
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "1 item"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "The cart should update item quantity in the basket --add",
+            "match": {
+              "location": "steps\\homepage.steps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160852900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 548079300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home---arrivals---add-to-basket---items",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Home - Arrivals - Add to Basket - Items",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26393163399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 39,
+            "name": "User is on the Books Shop Home page --items",
+            "match": {
+              "location": "steps\\homepage.steps.ts:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 353099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "User clicks on \"Selenium Ruby\" image in the Arrivals --items",
+            "match": {
+              "location": "steps\\homepage.steps.ts:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 614133200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "User clicks Add to Basket button --items",
+            "match": {
+              "location": "steps\\homepage.steps.ts:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 963584700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "User clicks on Item link --items",
+            "match": {
+              "location": "steps\\homepage.steps.ts:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 704071199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "User should be navigated to proceed to checkout page --items",
+            "match": {
+              "location": "steps\\homepage.steps.ts:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 303062300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 454900699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home---arrivals---add-to-basket---items---coupon",
+        "keyword": "Scenario",
+        "line": 45,
+        "name": "Home - Arrivals - Add to Basket - Items - Coupon",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26853947799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 46,
+            "name": "User is on the Books Shop Home page --coupon",
+            "match": {
+              "location": "steps\\homepage.steps.ts:104"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 376099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "User clicks on \"Selenium Ruby\" image in the Arrivals --coupon",
+            "match": {
+              "location": "steps\\homepage.steps.ts:108"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 592206500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "User clicks Add to Basket button --coupon",
+            "match": {
+              "location": "steps\\homepage.steps.ts:112"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 804123799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "User clicks on Item link --coupon",
+            "match": {
+              "location": "steps\\homepage.steps.ts:116"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 822394799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "User applys \"krishnasakinala\" Coupon code --coupon",
+            "match": {
+              "location": "steps\\homepage.steps.ts:120"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 406701500
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Coupon code applied successfully."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "There should be a successfully applied message displayed --coupon",
+            "match": {
+              "location": "steps\\homepage.steps.ts:124"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 337320799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 365737899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home---arrivals---add-to-basket---items---coupon-value-<-450",
+        "keyword": "Scenario",
+        "line": 54,
+        "name": "Home - Arrivals - Add to Basket - Items - Coupon value < 450",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 27231676699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 55,
+            "name": "User is on the Books Shop Home page --less 450",
+            "match": {
+              "location": "steps\\homepage.steps.ts:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 220800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 56,
+            "name": "User clicks on \"Mastering Javascript\" image in the Arivals --less 450",
+            "match": {
+              "location": "steps\\homepage.steps.ts:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 518811199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "User clicks Add to Basket button --less 450",
+            "match": {
+              "location": "steps\\homepage.steps.ts:137"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 854552999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "User clicks on Item link --less 450",
+            "match": {
+              "location": "steps\\homepage.steps.ts:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 780287699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "User applys \"krishnasakinala\" Coupon code --less 450",
+            "match": {
+              "location": "steps\\homepage.steps.ts:145"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 448432700
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "The minimum spend for this coupon is ₹450.00."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 60,
+            "name": "There should be a error message displayes --less 450",
+            "match": {
+              "location": "steps\\homepage.steps.ts:149"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 283854900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 421351399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home---arivals---add-to-basket---items---remove-book",
+        "keyword": "Scenario",
+        "line": 63,
+        "name": "Home - Arivals - Add to Basket - Items - Remove book",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 28307469900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 64,
+            "name": "User is on the Books Shop Home Page --remove",
+            "match": {
+              "location": "steps\\homepage.steps.ts:154"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 513900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "User clicks on \"Selenium Ruby\" image in the Arrivals --remove",
+            "match": {
+              "location": "steps\\homepage.steps.ts:158"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5125600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 66,
+            "name": "User clicks Add to Basket button --remove",
+            "match": {
+              "location": "steps\\homepage.steps.ts:162"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1413702500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "User clicks on Item link --remove",
+            "match": {
+              "location": "steps\\homepage.steps.ts:166"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6956899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "User removes the \"Selenium Ruby\" book in basket --remove",
+            "match": {
+              "location": "steps\\homepage.steps.ts:170"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1095299699
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Selenium Ruby removed. Undo?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 69,
+            "name": "There should be a message displayed --remove",
+            "match": {
+              "location": "steps\\homepage.steps.ts:174"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 849459199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 377314699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home---arrivals---add-to-basket---items---add-book---update-basket",
+        "keyword": "Scenario",
+        "line": 73,
+        "name": "Home - Arrivals - Add to Basket - Items - Add book - Update basket",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 30852792800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 74,
+            "name": "User is on the Books Shop Home Page --add book",
+            "match": {
+              "location": "steps\\homepage.steps.ts:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 360300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 75,
+            "name": "User click on \"Selenium Ruby\" image in the Arrivals --add book",
+            "match": {
+              "location": "steps\\homepage.steps.ts:183"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6088599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 76,
+            "name": "User clicks Add to Basket button --add book",
+            "match": {
+              "location": "steps\\homepage.steps.ts:187"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1513498200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 77,
+            "name": "User clicks on Item link --add book",
+            "match": {
+              "location": "steps\\homepage.steps.ts:191"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3450299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "The update basket button should be unclickable --add book",
+            "match": {
+              "location": "steps\\homepage.steps.ts:195"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1305850400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 79,
+            "name": "User modifies quantity for \"Selenium Ruby\" and clicks on Update basket button --add book",
+            "match": {
+              "location": "steps\\homepage.steps.ts:199"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 190033499
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Basket updated."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 80,
+            "name": "There should be a successfully updated message displayed --add book",
+            "match": {
+              "location": "steps\\homepage.steps.ts:203"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 834901299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 314876200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home---arrivals---add-to-basket---check-out---book-final-price---total-&-sub-total-condition",
+        "keyword": "Scenario",
+        "line": 84,
+        "name": "Home - Arrivals - Add to Basket - Check out - Book Final price - Total & Sub-total condition",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26419368900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 85,
+            "name": "User is on the Books Shop Home page --total",
+            "match": {
+              "location": "steps\\homepage.steps.ts:208"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 201399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 86,
+            "name": "User click on \"Selenium Ruby\" image in the Arrivals --total",
+            "match": {
+              "location": "steps\\homepage.steps.ts:212"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1044758700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 87,
+            "name": "User clicks Add to Basket button --total",
+            "match": {
+              "location": "steps\\homepage.steps.ts:216"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 768603700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 88,
+            "name": "User clicks on Item link --total",
+            "match": {
+              "location": "steps\\homepage.steps.ts:220"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 869208900
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "totalPrice",
+                      "subtotal",
+                      "tax",
+                      "total"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "₹500.00",
+                      "₹500.00",
+                      "₹10.00",
+                      "₹510.00"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 89,
+            "name": "There should be the information to checkout for the books in basket --total",
+            "match": {
+              "location": "steps\\homepage.steps.ts:224"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 226199699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 453220399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home---arrivals---add-to-basket---items---check-out-functionality",
+        "keyword": "Scenario",
+        "line": 94,
+        "name": "Home - Arrivals - Add to Basket - Items - Check out functionality",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26443536800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 95,
+            "name": "User is on the Books Shop Home page --checkout",
+            "match": {
+              "location": "steps\\homepage.steps.ts:229"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 246399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 96,
+            "name": "User click on \"Selenium Ruby\" image in the Arrivals --checkout",
+            "match": {
+              "location": "steps\\homepage.steps.ts:233"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 669089600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 97,
+            "name": "User clicks Add to Basket button --checkout",
+            "match": {
+              "location": "steps\\homepage.steps.ts:237"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 813005299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 98,
+            "name": "User clicks on Item link --checkout",
+            "match": {
+              "location": "steps\\homepage.steps.ts:241"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 706078200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 99,
+            "name": "User click on \"Proceed to Checkout\" button under total --checkout",
+            "match": {
+              "location": "steps\\homepage.steps.ts:245"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 740842500
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Billing Details"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 100,
+            "name": "User should be navigated to payment gateway page --checkout",
+            "match": {
+              "location": "steps\\homepage.steps.ts:249"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 172584600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 440922699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;home---arrivals---add-to-basket---items---check-out---payment-gateway",
+        "keyword": "Scenario",
+        "line": 104,
+        "name": "Home - Arrivals - Add to Basket - Items - Check out - Payment Gateway",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26066084099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 105,
+            "name": "User is on the Books Shop Home page --payment",
+            "match": {
+              "location": "steps\\homepage.steps.ts:254"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 241400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 106,
+            "name": "User click on \"Selenium Ruby\" image in the Arrivals --payment",
+            "match": {
+              "location": "steps\\homepage.steps.ts:258"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 675350600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 107,
+            "name": "User clicks Add to Basket button --payment",
+            "match": {
+              "location": "steps\\homepage.steps.ts:262"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 838482799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 108,
+            "name": "User clicks on Item link --payment",
+            "match": {
+              "location": "steps\\homepage.steps.ts:266"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 722946299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 109,
+            "name": "User click on \"Proceed to Checkout\" button under total --payment",
+            "match": {
+              "location": "steps\\homepage.steps.ts:270"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 760356900
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "First Name",
+                      "Last Name",
+                      "Email Address",
+                      "Phone",
+                      "Address",
+                      "City",
+                      "Postcode"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "test",
+                      "test",
+                      "test@gmail.com",
+                      "1234",
+                      "test",
+                      "test",
+                      "TEST"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 110,
+            "name": "User fills information to payment and click \"Place order\" button --payment",
+            "match": {
+              "location": "steps\\homepage.steps.ts:274"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2587200199
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Thank you. Your order has been received."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 113,
+            "name": "There should be a successful payment message --payment",
+            "match": {
+              "location": "steps\\homepage.steps.ts:279"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1916130400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 330538899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;verify-that-there-are-validation-error-messages-displayed-when-clicking-place-order-button-without-filling-payment-information",
+        "keyword": "Scenario",
+        "line": 116,
+        "name": "Verify that there are validation error messages displayed when clicking place order button without filling payment information",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 27101777899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 117,
+            "name": "User is on the Books Shop Home page --blank",
+            "match": {
+              "location": "steps\\homepage.steps.ts:284"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 479000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 118,
+            "name": "User clicks on \"Selenium Ruby\" image in the Arrivals --blank",
+            "match": {
+              "location": "steps\\homepage.steps.ts:288"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 548423899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 119,
+            "name": "User clicks on Add to Basket button --blank",
+            "match": {
+              "location": "steps\\homepage.steps.ts:292"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 773885699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 120,
+            "name": "User clicks on Item Link --blank",
+            "match": {
+              "location": "steps\\homepage.steps.ts:296"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 907892999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 121,
+            "name": "User clicks on \"Proceed to Checkout\" button under total --blank",
+            "match": {
+              "location": "steps\\homepage.steps.ts:300"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 777864700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 122,
+            "name": "User clicks on \"Place order\" button --blank",
+            "match": {
+              "location": "steps\\homepage.steps.ts:304"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1073358599
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Billing First Name is a required field."
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Billing Last Name is a required field."
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Billing Email Address is a required field."
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Billing Phone is a required field."
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Billing Address is a required field."
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Billing Town / City is a required field."
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Billing Postcode / ZIP is a required field."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 123,
+            "name": "There should be validation error messages displayed above billing details --blank",
+            "match": {
+              "location": "steps\\homepage.steps.ts:308"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1073499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 466049499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page;verify-that-user-can-not-apply-coupon-for-sale-book",
+        "keyword": "Scenario",
+        "line": 132,
+        "name": "Verify that user can not apply coupon for sale book",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26164004699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 133,
+            "name": "User is on the Books Shop Home page --sale",
+            "match": {
+              "location": "steps\\homepage.steps.ts:313"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 237200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 134,
+            "name": "User clicks on \"ADD TO BASKET\" button of Thinking in HTML image in the Arrivals--sale",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 135,
+            "name": "User clicks on \"ADD TO BASKET\" button of Selenium Ruby image in the Arrivals--sale",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 136,
+            "name": "User clicks on \"items\" link --sale",
+            "match": {
+              "location": "steps\\homepage.steps.ts:325"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 137,
+            "name": "User applys \"krishnasakinala\" coupon code for basket --sale",
+            "match": {
+              "location": "steps\\homepage.steps.ts:329"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Sorry, this coupon is not valid for sale items."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 138,
+            "name": "There should be an error message displayed --sale",
+            "match": {
+              "location": "steps\\homepage.steps.ts:333"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 371111299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
         "id": "home-page;verify-that-user-can-not-apply-coupon-for-book-having-price-less-450",
         "keyword": "Scenario",
         "line": 141,
@@ -13,9 +1641,8 @@
             "keyword": "Before",
             "hidden": true,
             "result": {
-              "status": "failed",
-              "duration": 32532344799,
-              "error_message": "Error: chrome navigation to demo site failed due to Error: page.goto: Timeout 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://practice.automationtesting.in/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\intern.nnyvi\\practice_automation_test\\hooks\\hooks.ts:19:15\n    at rejected (C:\\Users\\intern.nnyvi\\practice_automation_test\\hooks\\hooks.ts:6:65)"
+              "status": "passed",
+              "duration": 27057794199
             }
           },
           {
@@ -27,8 +1654,8 @@
               "location": "steps\\homepage.steps.ts:338"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 239100
             }
           },
           {
@@ -40,8 +1667,8 @@
               "location": "steps\\homepage.steps.ts:342"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 236041700
             }
           },
           {
@@ -53,8 +1680,8 @@
               "location": "steps\\homepage.steps.ts:346"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 724611400
             }
           },
           {
@@ -66,8 +1693,8 @@
               "location": "steps\\homepage.steps.ts:350"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 416702599
             }
           },
           {
@@ -89,8 +1716,8 @@
               "location": "steps\\homepage.steps.ts:354"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 239148799
             }
           },
           {
@@ -98,7 +1725,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 456187599
+              "duration": 390408300
             }
           }
         ],
