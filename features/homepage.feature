@@ -129,11 +129,19 @@ Feature: Home Page
     #         | Billing Town / City is a required field.    |
     #         | Billing Postcode / ZIP is a required field. |
 
-    Scenario: Verify that user can not apply coupon for sale book
-        Given User is on the Books Shop Home page --sale
-        And User clicks on "ADD TO BASKET" button of Thinking in HTML image in the Arrivals--sale
-        And User clicks on "ADD TO BASKET" button of Selenium Ruby image in the Arrivals--sale
-        And User clicks on "items" link --sale
-        And User applys "krishnasakinala" coupon code for basket --sale
-        Then There should be an error message displayed --sale
-            | Sorry, this coupon is not valid for sale items. |
+    # Scenario: Verify that user can not apply coupon for sale book
+    #     Given User is on the Books Shop Home page --sale
+    #     And User clicks on "ADD TO BASKET" button of Thinking in HTML image in the Arrivals--sale
+    #     And User clicks on "ADD TO BASKET" button of Selenium Ruby image in the Arrivals--sale
+    #     And User clicks on "items" link --sale
+    #     And User applys "krishnasakinala" coupon code for basket --sale
+    #     Then There should be an error message displayed --sale
+    #         | Sorry, this coupon is not valid for sale items. |
+
+    Scenario: Verify that user can not apply coupon for book having price less 450
+        Given User is on the Books Shop Home page --coupon less
+        When User clicks on ADD TO BASKET button of Mastering Javascript image in the Arrivals --coupon less
+        And User clicks on "items" link --coupon less
+        And User applys "krishnasakinala" coupon code for basket --coupon less
+        Then There should be an error message displayed --coupon less
+            | The minimum spend for this coupon is ₹450.00. |

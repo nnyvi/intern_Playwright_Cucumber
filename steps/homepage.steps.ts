@@ -314,11 +314,11 @@ Given('User is on the Books Shop Home page --sale', function () {
     homePage = new HomePage();
 });
 
-When('User clicks on "ADD TO BASKET" button of Thinking in HTML image in the Arrivals--sale', async function () {
+When('User clicks on ADD TO BASKET button of Thinking in HTML image in the Arrivals--sale', async function () {
     await homePage.click("Add Think");
 });
 
-When('User clicks on "ADD TO BASKET" button of Selenium Ruby image in the Arrivals--sale', async function () {
+When('User clicks on ADD TO BASKET button of Selenium Ruby image in the Arrivals--sale', async function () {
     await homePage.click("Add Selenium");
 });
 
@@ -332,4 +332,25 @@ When('User applys {string} coupon code for basket --sale', async function (strin
 
 Then('There should be an error message displayed --sale', async function (table: DataTable) {
     await homePage.verify(table, 'error');
+});
+
+//Verify that user can not apply coupon for book having price less 450
+Given('User is on the Books Shop Home page --coupon less', function () {
+    homePage = new HomePage()
+});
+
+When('User clicks on ADD TO BASKET button of Mastering Javascript image in the Arrivals --coupon less', async function () {
+    await homePage.click("Add Mastering Js")
+});
+
+When('User clicks on {string} link --coupon less', async function (string) {
+    await homePage.click(string);
+});
+
+When('User applys {string} coupon code for basket --coupon less', async function (string) {
+    await homePage.applyCoupon(string);
+});
+
+Then('There should be an error message displayed --coupon less', async function (table: DataTable) {
+    await homePage.verify(table, "error")
 });

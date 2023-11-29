@@ -10,6 +10,7 @@ export class HomePage {
         seleniumImage: "//img[@title='Selenium Ruby']",
         seleniumAdd: "//a[@data-product_id='160']",
         masteringJsImage: "//img[@title='Mastering JavaScript']",
+        masterJsAdd: "//a[@data-product_id='165']",
         thinkinginHTMLImage: "//img[@title='Thinking in HTML']",
         thinkAdd: "//a[@data-product_id='163']",
         addBtn: "//button[@class='single_add_to_cart_button button alt']",
@@ -70,6 +71,9 @@ export class HomePage {
                 break;
             case "Mastering Javascript":
                 element = this.Elements.masteringJsImage;
+                break;
+            case "Add Mastering Js":
+                element = this.Elements.masterJsAdd;
                 break;
             case 'description':
                 element = this.Elements.descriptionBtn;

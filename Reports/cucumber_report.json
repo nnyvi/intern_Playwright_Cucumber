@@ -4,82 +4,70 @@
     "elements": [
       {
         "description": "",
-        "id": "home-page;verify-that-user-can-not-apply-coupon-for-sale-book",
+        "id": "home-page;verify-that-user-can-not-apply-coupon-for-book-having-price-less-450",
         "keyword": "Scenario",
-        "line": 132,
-        "name": "Verify that user can not apply coupon for sale book",
+        "line": 141,
+        "name": "Verify that user can not apply coupon for book having price less 450",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
-              "status": "passed",
-              "duration": 32658395900
+              "status": "failed",
+              "duration": 32532344799,
+              "error_message": "Error: chrome navigation to demo site failed due to Error: page.goto: Timeout 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://practice.automationtesting.in/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\intern.nnyvi\\practice_automation_test\\hooks\\hooks.ts:19:15\n    at rejected (C:\\Users\\intern.nnyvi\\practice_automation_test\\hooks\\hooks.ts:6:65)"
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 133,
-            "name": "User is on the Books Shop Home page --sale",
+            "line": 142,
+            "name": "User is on the Books Shop Home page --coupon less",
             "match": {
-              "location": "steps\\homepage.steps.ts:313"
+              "location": "steps\\homepage.steps.ts:338"
             },
             "result": {
-              "status": "passed",
-              "duration": 445699
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 143,
+            "name": "User clicks on ADD TO BASKET button of Mastering Javascript image in the Arrivals --coupon less",
+            "match": {
+              "location": "steps\\homepage.steps.ts:342"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 134,
-            "name": "User clicks on \"ADD TO BASKET\" button of Thinking in HTML image in the Arrivals--sale",
+            "line": 144,
+            "name": "User clicks on \"items\" link --coupon less",
             "match": {
-              "location": "steps\\homepage.steps.ts:317"
+              "location": "steps\\homepage.steps.ts:346"
             },
             "result": {
-              "status": "passed",
-              "duration": 302115900
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 135,
-            "name": "User clicks on \"ADD TO BASKET\" button of Selenium Ruby image in the Arrivals--sale",
+            "line": 145,
+            "name": "User applys \"krishnasakinala\" coupon code for basket --coupon less",
             "match": {
-              "location": "steps\\homepage.steps.ts:321"
+              "location": "steps\\homepage.steps.ts:350"
             },
             "result": {
-              "status": "passed",
-              "duration": 246150299
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 136,
-            "name": "User clicks on \"items\" link --sale",
-            "match": {
-              "location": "steps\\homepage.steps.ts:325"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 564870100
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 137,
-            "name": "User applys \"krishnasakinala\" coupon code for basket --sale",
-            "match": {
-              "location": "steps\\homepage.steps.ts:329"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 498488999
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -88,21 +76,21 @@
                 "rows": [
                   {
                     "cells": [
-                      "Sorry, this coupon is not valid for sale items."
+                      "The minimum spend for this coupon is ₹450.00."
                     ]
                   }
                 ]
               }
             ],
             "keyword": "Then ",
-            "line": 138,
-            "name": "There should be an error message displayed --sale",
+            "line": 146,
+            "name": "There should be an error message displayed --coupon less",
             "match": {
-              "location": "steps\\homepage.steps.ts:333"
+              "location": "steps\\homepage.steps.ts:354"
             },
             "result": {
-              "status": "passed",
-              "duration": 233315299
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -110,7 +98,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 383386000
+              "duration": 456187599
             }
           }
         ],
