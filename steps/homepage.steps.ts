@@ -3,7 +3,7 @@ import { HomePage } from "../page/homePage";
 
 let homePage: HomePage;
 
-//Home Page with three Sliders only
+//Verify that there are three Slider on Home page
 Given('User is on the Books Shop Home page --slider', function () {
     homePage = new HomePage();
 });
@@ -12,7 +12,7 @@ Then('The Home page should contain three Sliders only --slider', async function 
     await homePage.verifySliders();
 });
 
-//Home Page with three Arrivals only
+//Verify that there are three new Arrivals displaying on Home page
 Given('User is on the Books Shop Home page --arrival', function () {
     homePage = new HomePage();
 });
@@ -21,7 +21,7 @@ Then('The Home page should contain three Arrivals only --arrival', async functio
     await homePage.verifyArrivals();
 });
 
-//Home page - Images in Arrivals should navigate
+//Verify that the user is navigated to the next page where they can add that book into their basket.
 Given('User is on the Books Shop Home page --navigate', function () {
     homePage = new HomePage();
 });
@@ -34,7 +34,7 @@ Then('User should be navigated to the next page to add that book to basket --nav
     await homePage.navigate('description');
 });
 
-//Home page - Arrivals - Images - Description
+//Verify that the user can see description of book when clicking on description button
 Given('User is on the Books Shop Home page --description', function () {
     homePage = new HomePage();
 });
@@ -48,7 +48,7 @@ Then('There should be a description regarding that book the user clicked on --de
     await homePage.verify(table, 'description');
 });
 
-//Home page - Arrivals - Images - Reviews
+//Verify that the user can see reviews of book when clicking on Reviews button
 Given('User is on the Books Shop Home page --reviews', function () {
     homePage = new HomePage();
 });
@@ -62,7 +62,7 @@ Then('There should be a Reviews regarding that book the user clicked on --review
     await homePage.verify(table, 'reviews');
 });
 
-//Home page - Arrivals - Images - Add to Basket
+//Verify that the user can add book into the item when clicking on add to basket button
 Given('User is on the Books Shop Home page --add', function () {
     homePage = new HomePage();
 });
@@ -79,7 +79,7 @@ Then('The cart should update item quantity in the basket --add', async function 
     await homePage.verify(table, 'cart');
 });
 
-//Home - Arrivals - Add to Basket - Items
+//Verify that the user is navigated to the checkout page when clicking on the items link after add book to basket
 Given('User is on the Books Shop Home page --items', function () {
     homePage = new HomePage();
 });
@@ -100,7 +100,7 @@ Then('User should be navigated to proceed to checkout page --items', async funct
     await homePage.navigate('proceedtocheckout');
 });
 
-//Home - Arrivals - Add to Basket - Items - Coupon
+//Verify that the coupon is applied for total for the book having value more 450 and not being a sale product
 Given('User is on the Books Shop Home page --coupon', function () {
     homePage = new HomePage();
 });
@@ -125,32 +125,7 @@ Then('There should be a successfully applied message displayed --coupon', async 
     await homePage.verify(table, 'message');
 });
 
-//Home - Arrivals - Add to Basket - Items - Coupon value < 450
-Given('User is on the Books Shop Home page --less 450', function () {
-    homePage = new HomePage();
-});
-
-When('User clicks on {string} image in the Arivals --less 450', async function (string) {
-    await homePage.click(string);
-});
-
-When('User clicks Add to Basket button --less 450', async function () {
-    await homePage.click('addtobasket');
-});
-
-When('User clicks on Item link --less 450', async function () {
-    await homePage.click('items');
-});
-
-When('User applys {string} Coupon code --less 450', async function (string) {
-    await homePage.applyCoupon(string);
-});
-
-Then('There should be a error message displayes --less 450', async function (table: DataTable) {
-    await homePage.verify(table, 'error');
-});
-
-//Home - Arivals - Add to Basket - Items - Remove book
+//Verify that the book is removed when the user clicks on the remove button in the checkout page
 Given('User is on the Books Shop Home Page --remove', function () {
     homePage = new HomePage();
 });
@@ -175,7 +150,7 @@ Then('There should be a message displayed --remove', async function (table: Data
     await homePage.verify(table, 'message');
 });
 
-//Home - Arrivals - Add to Basket - Items - Add book - Update basket
+//Verify that the items information is updated when the user modifies the quantity of books
 Given('User is on the Books Shop Home Page --add book', function () {
     homePage = new HomePage();
 });
@@ -204,7 +179,7 @@ Then('There should be a successfully updated message displayed --add book', asyn
     await homePage.verify(table, 'message');
 });
 
-//Home - Arrivals - Add to Basket - Check out - Book Final price - Total & Sub-total condition
+//Verify that the total price of book, subtotal, tax and total are displayed 
 Given('User is on the Books Shop Home page --total', function () {
     homePage = new HomePage();
 });
@@ -225,7 +200,7 @@ Then('There should be the information to checkout for the books in basket --tota
     await homePage.verifyPrice(table);
 });
 
-//Home - Arrivals - Add to Basket - Items - Check out functionality
+//Verify that the user is navigated to the payment page when clicking on the Proceed to checkout button
 Given('User is on the Books Shop Home page --checkout', function () {
     homePage = new HomePage();
 });
@@ -250,7 +225,7 @@ Then('User should be navigated to payment gateway page --checkout', async functi
     await homePage.verify(table, 'Proceed to Checkout');
 });
 
-//Home - Arrivals - Add to Basket - Items - Check out - Payment Gateway
+//Verify that there is a successful payment message when clicking on the Place order button after filling required information
 Given('User is on the Books Shop Home page --payment', function () {
     homePage = new HomePage();
 });
